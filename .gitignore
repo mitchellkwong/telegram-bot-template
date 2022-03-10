@@ -1,0 +1,9 @@
+# Cache
+**/__pycache__/
+
+# Databases
+**/*.pickle
+**/*.sqlite
+
+# Config
+.env
