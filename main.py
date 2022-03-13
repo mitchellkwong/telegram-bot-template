@@ -45,8 +45,7 @@ for feature in FEATURES:
 
 # Register webhook with telegram server and start listening
 try:
-	updater.bot.set_webhook(f'{HOST}/{TOKEN}')
-	updater.start_webhook(listen='0.0.0.0', port=int(PORT), url_path=TOKEN)
+	updater.start_webhook('0.0.0.0', int(PORT), webhook_url=f'{HOST}/{TOKEN}', url_path=TOKEN)
 	logger.info(f'Deployed with webhook!')
 
 # Fallback to polling
